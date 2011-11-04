@@ -1,3 +1,9 @@
+# revision 16687
+# category Package
+# catalog-ctan /macros/latex/contrib/microtype
+# catalog-date 2010-01-12 04:41:39 +0100
+# catalog-license lppl
+# catalog-version 2.4
 Name:		texlive-microtype
 Version:	2.4
 Release:	1
@@ -78,6 +84,7 @@ ligatures.
 #- source
 %doc %{_texmfdistdir}/source/latex/microtype/microtype.dtx
 %doc %{_texmfdistdir}/source/latex/microtype/microtype.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -88,3 +95,5 @@ ligatures.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
