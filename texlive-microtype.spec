@@ -6,7 +6,7 @@
 # catalog-version 2.4
 Name:		texlive-microtype
 Version:	2.4
-Release:	1
+Release:	2
 Summary:	An interface to the micro-typographic features of pdfTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
