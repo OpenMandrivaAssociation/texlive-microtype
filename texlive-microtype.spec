@@ -1,13 +1,13 @@
-# revision 16687
+# revision 30755
 # category Package
 # catalog-ctan /macros/latex/contrib/microtype
-# catalog-date 2010-01-12 04:41:39 +0100
+# catalog-date 2013-05-26 21:18:14 +0200
 # catalog-license lppl
-# catalog-version 2.4
+# catalog-version 2.5a
 Name:		texlive-microtype
-Version:	2.4
-Release:	2
-Summary:	An interface to the micro-typographic features of pdfTeX
+Version:	2.5a
+Release:	1
+Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
 License:	LPPL
@@ -20,23 +20,26 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-The package provides a LaTeX interface to pdfTeX's micro-
-typographic extensions: character protrusion and font
-expansion. The package also offers a lua interface to the
-corresponding features of LuaTeX. The package allows you to
-restrict character protrusion and/or font expansion to a
-certain set of fonts, or to certain parts of the document (for
-example, based on selected language), and to configure micro-
-typographic aspects of the fonts in a straight-forward and
-flexible way. Settings for various fonts are provided. The
-bundle also provides a letterspace package; this improves on
-the alternatives (letterspacing and soul), and also provides a
-means of protecting ligatures--notably those in fraktur fonts.
-Note: Font expansion and character protrusion only work with
-pdfTeX and LuaTeX. For pdfTeX, at least version 0.14f is
-required; version 1.20a is needed for automatic font expansion.
-With pdfTeX version 1.30, a command is provided for suppressing
-ligatures.
+The package provides a LaTeX interface to the micro-typographic
+extensions that were introduced by pdfTeX and have since also
+propagated to XeTeX and LuaTeX: most prominently, character
+protrusion and font expansion, furthermore the adjustment of
+interword spacing and additional kerning, as well as
+hyphenatable letterspacing (tracking) and the possibility to
+disable all or selected ligatures. These features may be
+applied to customisable sets of fonts, and all micro-
+typographic aspects of the fonts can be configured in a
+straight-forward and flexible way. Settings for various fonts
+are provided. Note that character protrusion requires pdfTeX,
+LuaTeX, or XeTeX. Font expansion works with pdfTeX or LuaTeX.
+The package will by default enable protrusion and expansion if
+they can safely be assumed to work. Disabling ligatures
+requires pdfTeX or LuaTeX, while the adjustment of interword
+spacing and of kerning only works with pdfTeX. Letterspacing is
+available with pdfTeX or LuaTeX. The alternative package
+`letterspace', which also works with plain TeX, provides the
+user commands for letterspacing only, omitting support for all
+other extensions.
 
 %post
     %{_sbindir}/texlive.post
@@ -49,9 +52,15 @@ ligatures.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/microtype/letterspace.sty
+%{_texmfdistdir}/tex/latex/microtype/microtype-luatex.def
+%{_texmfdistdir}/tex/latex/microtype/microtype-pdftex.def
+%{_texmfdistdir}/tex/latex/microtype/microtype-xetex.def
 %{_texmfdistdir}/tex/latex/microtype/microtype.cfg
 %{_texmfdistdir}/tex/latex/microtype/microtype.lua
 %{_texmfdistdir}/tex/latex/microtype/microtype.sty
+%{_texmfdistdir}/tex/latex/microtype/mt-CharisSIL.cfg
+%{_texmfdistdir}/tex/latex/microtype/mt-LatinModernRoman.cfg
+%{_texmfdistdir}/tex/latex/microtype/mt-PalatinoLinotype.cfg
 %{_texmfdistdir}/tex/latex/microtype/mt-bch.cfg
 %{_texmfdistdir}/tex/latex/microtype/mt-blg.cfg
 %{_texmfdistdir}/tex/latex/microtype/mt-cmr.cfg
@@ -72,6 +81,7 @@ ligatures.
 %doc %{_texmfdistdir}/doc/latex/microtype/microtype.pdf
 %doc %{_texmfdistdir}/doc/latex/microtype/test-microtype.tex
 #- source
+%doc %{_texmfdistdir}/source/latex/microtype/microtype-utf.dtx
 %doc %{_texmfdistdir}/source/latex/microtype/microtype.dtx
 %doc %{_texmfdistdir}/source/latex/microtype/microtype.ins
 
@@ -84,17 +94,3 @@ ligatures.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4-2
-+ Revision: 753981
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4-1
-+ Revision: 719019
-- texlive-microtype
-- texlive-microtype
-- texlive-microtype
-- texlive-microtype
-
