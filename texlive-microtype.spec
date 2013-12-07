@@ -6,7 +6,7 @@
 # catalog-version 2.5a
 Name:		texlive-microtype
 Version:	2.5a
-Release:	4
+Release:	5
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
