@@ -1,12 +1,6 @@
-# revision 30755
-# category Package
-# catalog-ctan /macros/latex/contrib/microtype
-# catalog-date 2013-05-26 21:18:14 +0200
-# catalog-license lppl
-# catalog-version 2.5a
 Name:		texlive-microtype
-Version:	2.5a
-Release:	9
+Version:	2.7
+Release:	1
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
@@ -51,39 +45,10 @@ other extensions.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/microtype/letterspace.sty
-%{_texmfdistdir}/tex/latex/microtype/microtype-luatex.def
-%{_texmfdistdir}/tex/latex/microtype/microtype-pdftex.def
-%{_texmfdistdir}/tex/latex/microtype/microtype-xetex.def
-%{_texmfdistdir}/tex/latex/microtype/microtype.cfg
-%{_texmfdistdir}/tex/latex/microtype/microtype.lua
-%{_texmfdistdir}/tex/latex/microtype/microtype.sty
-%{_texmfdistdir}/tex/latex/microtype/mt-CharisSIL.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-LatinModernRoman.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-PalatinoLinotype.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-bch.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-blg.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-cmr.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-euf.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-eur.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-euroitc.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-eus.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-msa.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-msb.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-mvs.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-pad.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-pmn.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-ppl.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-ptm.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-ugm.cfg
-%{_texmfdistdir}/tex/latex/microtype/mt-zpeu.cfg
-%doc %{_texmfdistdir}/doc/latex/microtype/README
-%doc %{_texmfdistdir}/doc/latex/microtype/microtype.pdf
-%doc %{_texmfdistdir}/doc/latex/microtype/test-microtype.tex
+%{_texmfdistdir}/tex/latex/microtype
+%doc %{_texmfdistdir}/doc/latex/microtype
 #- source
-%doc %{_texmfdistdir}/source/latex/microtype/microtype-utf.dtx
-%doc %{_texmfdistdir}/source/latex/microtype/microtype.dtx
-%doc %{_texmfdistdir}/source/latex/microtype/microtype.ins
+%doc %{_texmfdistdir}/source/latex/microtype
 
 #-----------------------------------------------------------------------
 %prep
