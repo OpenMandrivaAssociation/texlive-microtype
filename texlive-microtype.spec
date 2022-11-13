@@ -1,13 +1,13 @@
 Name:		texlive-microtype
-Version:	2.7b
+Version:	63708
 Release:	1
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -36,12 +36,12 @@ user commands for letterspacing only, omitting support for all
 other extensions.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,7 +52,8 @@ other extensions.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
