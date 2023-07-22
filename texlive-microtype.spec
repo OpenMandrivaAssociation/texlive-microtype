@@ -1,6 +1,6 @@
 Name:		texlive-microtype
-Version:	63708
-Release:	2
+Version:	66587
+Release:	1
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
