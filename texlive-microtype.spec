@@ -1,5 +1,5 @@
 Name:		texlive-microtype
-Version:	66587
+Version:	70805
 Release:	1
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
