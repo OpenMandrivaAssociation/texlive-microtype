@@ -3,7 +3,7 @@ Version:	70805
 Release:	1
 Summary:	Subliminal refinements towards typographical perfection
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/microtype
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/microtype
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/microtype.doc.r%{version}.tar.xz
